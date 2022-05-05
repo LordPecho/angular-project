@@ -1,0 +1,54 @@
+<mat-toolbar class="nav-bar"  fxLayout="row" >
+  <div fxFlex="70" fxLayoutGap="20px" fxLayoutAlign="start center">
+  <button class="home-button change-on-hover" mat-icon-button fxFlex="5" (click)="navigate(['/'])">
+   <mat-icon>home</mat-icon>
+ </button>
+  <input  class="search-bar" matInput placeholder="Search for something...">
+ <div class="nav-text-items" fxLayout="row" fxLayoutAlign="space-between none">
+  <button class="change-on-hover"> Pull requests </button>
+  <button class="change-on-hover" > Issues </button>
+  <button class="change-on-hover marketplace"> Marketplace </button>
+  <button class="change-on-hover explore"> Explore </button>
+</div>
+</div>
+<div fxFlex="30" fxLayoutAlign="end none" fxLayoutGap="20px">
+ <button class="repository change-on-hover" mat-icon-button>
+  <mat-icon>add</mat-icon>
+  <mat-icon>keyboard_arrow_down</mat-icon>
+</button>
+ <button class="change-on-hover" mat-icon-button >
+   <mat-icon>notifications_none</mat-icon>
+ </button>
+ <button class="profile  change-on-hover" mat-icon-button>
+  <mat-icon>person_pin</mat-icon>
+</button>
+</div>
+</mat-toolbar>
+<div >
+
+  <mat-toolbar id="menu" class="bottom-nav-bar"  fxLayout="row" fxLayoutAlign="space-evenly end">
+
+    <div id="issues" class="sub-header"
+    (click)="viewMode = 'issues'"
+    [class.active]="viewMode == 'issues'"
+    (click)="navigate(['/', 'issues'])">
+    <mat-icon class="under" >adjust</mat-icon><button class="under" > Issues </button>
+  </div>
+
+    <div id="pullRequest" class="sub-header"
+    (click)="viewMode = 'pulls'"
+    [class.active]="viewMode == 'pulls'"
+    (click)="navigate(['/' , 'pull-request'])">
+    <mat-icon class="under" >subdirectory_arrow_left</mat-icon>
+    <button class="under" > Pull requests </button>
+  </div>
+
+  </mat-toolbar>
+
+  </div>
+
+
+<router-outlet></router-outlet>
+
+
+

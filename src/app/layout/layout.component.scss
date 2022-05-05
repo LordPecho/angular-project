@@ -1,0 +1,105 @@
+*{
+  box-sizing: border-box;
+}
+.nav-bar{
+  height: 50px;
+  background-color: rgb(36, 41, 47);
+  padding-top: 10px;
+}
+button{
+  border: none;
+  color: white;
+  background-color: rgb(36, 41, 47);
+  vertical-align: middle;
+}
+
+.nav-text-items{
+  color:white;
+}
+.nav-text-items button{
+  margin: 0 10px;
+  vertical-align: middle;
+}
+.change-on-hover:hover{
+  color: rgb(190, 191, 193);
+  cursor: pointer;
+}
+.search-bar{
+  width: 100px;
+  background-color: transparent;
+}
+.search-bar {
+  background-color: white;
+  width:200px;
+  height: 25px;
+  transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  -o-transition:.5s;
+}
+.search-bar:focus {
+  width:350px;
+  transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  -o-transition:.5s;
+}
+
+
+.under{
+  background-color: transparent;
+  color: black;
+  vertical-align:text-top;
+}
+.under:hover{
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 825px) {
+  .search-bar{
+    display: none;
+  }
+
+}
+@media only screen and (max-width: 625px) {
+  .profile{
+    display: none;
+  }
+  .repository{
+    display: none;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .marketplace{
+    display: none;
+  }
+  .explore{
+    display: none;
+  }
+}
+.sub-header {
+  cursor: pointer;
+  vertical-align: auto;
+  padding: 8px 16px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+}
+.active{
+  font-weight: 600;
+  color: red;
+  border-bottom: 2px solid red;
+  outline: 1px dotted transparent;
+  outline-offset: -1px;
+}
+.bottom-nav-bar{
+  border-bottom: 1px solid lightgray;
+}
+.sub-header:hover{
+  background-color: rgb(231, 231, 231);
+}
+
